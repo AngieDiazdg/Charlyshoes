@@ -1,2 +1,298 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!-- abre nav -->
+    <nav  id="home" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">
+                <p class="logo">Charly Shoes</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll href="#novedades">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll href="#historia">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll href="#conocenos">Conocenos</a>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- cierra nav-->
+
+    <!-- abre sección hero-->
+
+    <div class="container-fluid" >
+        <div class="row align-items-center hero">
+            <div class="col-lg-3 offset-lg-2">
+
+                <h3>Bajada</h3>
+                <h1>Charly Shoes</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt natus cupiditate ullam, libero
+                    maiores unde harum, accusantium odit odio, labore quo? Iste nisi, ratione, saepe nobis voluptate
+                    alias nesciunt distinctio et est voluptatum explicabo exercitatio</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- cierra sección hero-->
+
+    <!-- abre seccion novedades-->
+    <div class="container-fluid">
+    <div id="novedades" class="row py-4 my-5">
+        <div class="col-md-5 offset-md-2 py-3">
+            <h2>Novedades</h2>
+            <ul class="lista-productos">
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src='./images/novedades1.jpg' alt=""> Modelo 1</a></li>
+                <li><a href="#"><img src='./images/novedades1.jpg' alt=""> Modelo 1</a></li>
+                <li><a href="#"><img src='./images/novedades1.jpg' alt=""> Modelo 1</a></li>
+                <li><a href="#"><img src='./images/novedades1.jpg' alt=""> Modelo 1</a></li>
+                <li><a href="#"><img src='./images/novedades1.jpg' alt=""> Modelo 1</a></li>
+            </ul>
+        </div>
+
+        <!-- abre sección testimonios-->
+        <div class="col-md-4 py-3">
+            <div class="testimonios py-3">
+                <h2 class="text-center">Testimonios</h2>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+
+                            <div class="testimonio d-block w-100">
+                                <h5>"Excelente atención de los vendedores y asesoramiento, volvería sin dudas"</h5><br>
+                                <p> Fernanda, Lomas de zamora.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="testimonio d-block w-100">
+
+                                <h5>"Tienen todos los últimos modelos y los talles +45 en los modelos más nuevos,
+                                    increíble"</h5><br>
+                                <p>Francisco, Belgrano.</p>
+
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="testimonio d-block w-100">
+
+                                <h5>"Los mejores eventos de la zona! Toda la movida sktr en los mejores skateparks de
+                                    zona sur!"</h5><br>
+                                <p>Román, quilmes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!--cierra seccion testimonios-->
+
+    </div> <!-- cierra seccion novedades-->
+
+
+
+
+
+
+    <!-- abre sección historia-->
+
+
+
+    <div id="historia" class="row align-items-center py-5">
+
+        <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+            <img src="./images/historia_1.jpg" class="rounded img-fluid">
+        </div>
+        <div class="col-lg-2 col-md-3 d-none d-sm-block">
+            <img src="./images/historia_2.jpg" class="rounded img-fluid">
+        </div>
+        <div class="col-12 d-sm-none">
+            <img src="./images/historia_3.jpg" class="rounded img-fluid">
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4">
+            <h2>Historia</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consectetur numquam odit corporis iusto
+                ea. Ab quo voluptatibus fugiat blanditiis?</p>
+        </div>
+
+    </div>
+
+
+    <!-- cierra sección historia-->
+
+    <!--abre sección nosotros-->
+
+    <div class="container-fluid staff py-5">
+        <div id="nosotros" class="row g-3 offset-lg-2 py-4 my-5">
+            <h2>Nosotros</h2>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="./images/nosotros2.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Alejandra Ruiz</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, suscipit.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="./images/nosotros1.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Brandon Ramirex</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, suscipit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="./images/nosotros3.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ivonne Pier</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, suscipit.</p>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+    </div>
+
+    <!-- cierra sección nosotros-->
+
+    <!--abre conocenos-->
+<div class="container-fluid py-5">
+    <div id="conocenos" class="row py-4 my-5 g-3">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2 gx-3">
+            <h2>Visitanos</h2>
+            <div class=" map-area ratio ratio-16x9">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2192339934513!2d-58.42229628482657!3d-34.598617380460844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca62d4cf1563%3A0x686de505d84c67e6!2sAv.%20Medrano%20951%2C%20C1179AAQ%20CABA!5e0!3m2!1sen!2sar!4v1654198837281!5m2!1sen!2sar"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+        <!--abre contactanos-->
+        <div class="col-12 col-md-6 col-lg-4">
+            <h2>Contactanos</h2>
+
+            <!-- abre formulario-->
+            <form action="/" method="post" class="row g-3 py-4">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                </div>
+                <div class="col-md-6">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido">
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="tuemail@email.com" name="email">
+                </div>
+                <div class="col-12">
+                    <label for="tel" class="form-label">Tel</label>
+                    <input type="text" class="form-control" id="tel" placeholder="15 1234 5678" name="tel">
+                </div>
+                <div class="col-12">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" name="mensaje"></textarea>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                </div>
+            </form>
+          
+           {{message}}
+         
+            <!--cierra formulario-->
+
+        </div>
+    </div> <!-- div container-->
+        <!--cierra contactanos-->
+
+
+
+    </div> <!-- cierra seccion conocenos-->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Título</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui reiciendis nam illum commodi enim esse
+                    amet dolorum nobis alias sed!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--cierra modal-->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+
+
+            <div class="row text-center pt-4">
+                <div class="col-12 txtfooter">Diseñado por Angie Díaz - CharlyShoes Brand - Todos los derechos
+                    reservados.</div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- cierra footer-->
+
