@@ -1,13 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var novedadesModel = require('../models/novedadesModel');
 
 
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', async function (req, res, next) {
+  var novedades = await novedadesModel.getNovedades();
+  res.render('index', {
+    novedades
+  });
 });
 
 router.post('/', async (req, res, next) => {
@@ -18,8 +22,8 @@ router.post('/', async (req, res, next) => {
   var mensaje = req.body.mensaje;
 
   var obj = {
-    to:'diazortigoza.mariangel@gmail.com',
-    subject: 'Contacto desde la web', 
+    to: 'diazortigoza.mariangel@gmail.com',
+    subject: 'Contacto desde la web',
     html: nombre + "" + apellido + " se contactó a través del formulario y quiere más info " + email + ".<br> Además, hizo el siguiente comentario: " + mensaje + ".<br> Su tel es " + tel
   } //cierra el objeto
 
@@ -27,14 +31,14 @@ router.post('/', async (req, res, next) => {
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
     auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS
-  }
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS
+    }
   }) //cierra transporter
 
   var info = await transporter.sendMail(obj);
 
-  res.render ('index', {
+  res.render('index', {
     message: 'Mensaje enviado correctamente',
   });
 }); //cierra petición del post
