@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="col-sm-8 offset-sm-2 col-lg-4 offset-lg-2 col-xl-6 offset-xl-3 text-center login">
+
+        <form class="rounded bg-white shadow p-5" action="/admin/novedades/agregar" method="post">
+            <h3>Agregar nueva novedad</h3>
+            <br>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Titulo" name="titulo">
+                <label for="floatingInput">Título</label>
+            </div>
+           
+            <div class="form-floating">
+                <textarea type="text" class="form-control" id="floatingPassword" placeholder="Subtítulo" name="subtitulo"></textarea>
+                <label for="floatingPassword">Subtítulo</label>
+            </div>
+            <br>
+            <div class="form-floating">
+                <textarea type="text" class="form-control" id="floatingPassword" placeholder="Cuerpo" name="cuerpo"></textarea>
+                <label for="floatingPassword">Cuerpo</label>
+            </div>
+            <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                </div>
+
+        </form>
+        {{#if error}}
+        <p>{{message}}</p>
+        {{/if}}
+        
+
+       
+    </div>
+</div>
