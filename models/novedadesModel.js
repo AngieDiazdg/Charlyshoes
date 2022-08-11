@@ -9,10 +9,45 @@ async function getNovedades() {
 
 }
 
-async function deleteNovedadesById (id) {
-    var query ='delete from novedades where id = ?';
+async function deleteNovedadesById(id) {
+    var query = 'delete from novedades where id = ?';
     var rows = await pool.query(query, [id]);
     return rows;
 }
 
-module.exports = { getNovedades, deleteNovedadesById }
+async function insertNovedad(obj) {
+    try {
+        var query = 'insert into novedades set ?';
+        var rows = await pool.query(query, [obj])
+        return rows;
+
+    } catch (error) {
+        console.log(error);
+        throw error;
+    } //cierra catch
+} //cierra insert
+
+//traigo los datos para modificar una sola novedad
+
+async function getNovedadById(id) {
+    var query = 'select * from novedades where id=? ';
+    var rows = await pool.query(query, [id]);
+    return rows[0];
+}
+
+//modificar los datos traidos
+
+async function modificarNovedadById(obj, id) {
+    try {
+        var query = "update novedades set ? where id=?";
+var rows = await pool.query(query, [obj, id]);
+        return rows;
+    } catch (error) {
+        throw error;
+    }
+} //cierra update
+
+
+
+
+module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNovedadById, modificarNovedadById }
