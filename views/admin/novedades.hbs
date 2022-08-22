@@ -18,7 +18,18 @@
         <div class="col-7 text-left">
             <h2>Listado de Novedades</h2>
         </div>
-        <div class="col-5 text-center">
+        
+{{!-- agregada barra buscadora --}}
+        <nav class="navbar bg-light col-9 text-left">
+  <div class="container-fluid">
+    <form class="d-flex" role="search" action="/admin/novedades" method="get">
+      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}}value="{{q}}"{{/if}}>
+      <button class="btn btn-dark" type="submit">Buscar</button>
+    </form>
+  </div>
+</nav>
+{{!-- agregada barra buscadora fin --}}
+        <div class="col-3 text-left">
             <a href="/admin/novedades/agregar" class="btn btn-dark">Nuevo</a>
         </div>
     </div>
@@ -31,6 +42,7 @@
                     <tr>
                         <th scope="col-3">#</th>
                         <th scope="col-6">Titulo</th>
+                        <th scope="col-6">Imagen</th>
                         <th scope="col-3" class="text-right">Acciones</th>
                     </tr>
                 </thead>
@@ -39,6 +51,7 @@
                     <tr>
                         <th scope="row">{{id}}</th>
                         <td>{{titulo}}</td>
+                        <td>{{{imagen}}}</td>
                         <td class="text-right">
                             <a href="/admin/novedades/modificar/{{id}}" class="btn btn-dark">modificar</a>
                             <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-dark">eliminar</a>
@@ -48,6 +61,12 @@
                     {{/each }}
                 </tbody>
             </table>
+
+            {{#if is_search}}
+            {{#unless novedades.length}}
+            No se encontraron resultados para "<b>{{q}}</b>"
+            {{/unless}}
+            {{/if}}
         </div>
     </div>
     {{!-- finfila3 --}}
