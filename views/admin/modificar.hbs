@@ -1,7 +1,8 @@
 <div class="container">
     <div class="col-sm-8 offset-sm-2 col-lg-4 offset-lg-2 col-xl-6 offset-xl-3 text-center login">
 
-        <form class="rounded bg-white shadow p-5" action="/admin/novedades/modificar" method="post">
+        <form class="rounded bg-white shadow p-5" action="/admin/novedades/modificar" method="post"
+            enctype="multipart/form-data">
             <input type="hidden" value="{{novedad.id}}" name="id">
             <h3>Modificar la novedad</h3>
             <br>
@@ -14,6 +15,19 @@
                 <textarea type="text" class="form-control" id="floatingPassword"
                     name="subtitulo">{{novedad.subtitulo}}</textarea>
                 <label for="floatingPassword">Subtítulo</label>
+            </div>
+            <br>
+            <div class="form-group">
+                <p>
+                    <label>Imagen <input type="file" name="imagen" id="imagen" /></label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="img_delete" id="img_delete" value="1">
+                        Eliminar imagen actual
+                    </label>
+                    <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                </p>
             </div>
             <br>
             <div class="form-floating">
